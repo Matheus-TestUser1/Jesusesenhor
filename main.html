@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerta Urgente - A Volta de Jesus Cristo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            border: 2px solid #gold;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #8B0000;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            font-style: italic;
+        }
+
+        .urgent-banner {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(255,107,107,0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .post {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .post h2 {
+            color: #8B0000;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #FFD700;
+            padding-bottom: 10px;
+        }
+
+        .post-meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .post-meta::before {
+            content: "📅";
+        }
+
+        .scripture {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            border-left: 5px solid #FFD700;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-style: italic;
+        }
+
+        .scripture::before {
+            content: "📖 ";
+            font-size: 1.2em;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            border: 2px solid #e17055;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .warning-box::before {
+            content: "⚠️ ATENÇÃO: ";
+            font-weight: bold;
+            color: #d63031;
+        }
+
+        .sidebar {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .sidebar h3 {
+            color: #8B0000;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .prophecy-list {
+            list-style: none;
+        }
+
+        .prophecy-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .prophecy-list li::before {
+            content: "✅ ";
+            color: #00b894;
+        }
+
+        .call-to-action {
+            background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(0,184,148,0.3);
+        }
+
+        .call-to-action h3 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .prayer-time {
+            background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: rgba(255,255,255,0.8);
+            margin-top: 40px;
+        }
+
+        .verse-highlight {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #FFD700;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .post, .sidebar {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔔 ALERTA URGENTE 🔔</h1>
+            <p class="subtitle">A Segunda Vinda de Jesus Cristo</p>
+            <p>Vigiai e Orai - O Tempo se Aproxima</p>
+        </div>
+
+        <div class="urgent-banner">
+            ⚡ JESUS ESTÁ MAIS PRÓXIMO DE VOLTAR DO QUE MUITOS IMAGINAM ⚡
+            <br><strong>VIGIAI E ORAI - NÃO SABEIS QUE DIA VIRÁ VOSSO SENHOR!</strong>
+        </div>
+
+        <article class="post">
+            <h2>🚨 Jesus Está Mais Próximo Que Imaginamos!</h2>
+            <div class="post-meta">Publicado hoje - Mensagem Urgente</div>
+            
+            <p><strong>Irmãos e irmãs em Cristo, JESUS ESTÁ VOLTANDO!</strong> Ele está mais próximo de voltar do que muitos imaginam. Não podemos mais viver como se tivéssemos todo o tempo do mundo - cada dia que passa nos aproxima mais do glorioso retorno do nosso Salvador!</p>
+
+            <div class="scripture">
+                "Vigiai, pois, porque não sabeis a que hora há de vir o vosso Senhor." - Mateus 24:42
+            </div>
+
+            <div class="warning-box">
+                VIGIAI E ORAI! Jesus nos alertou para estarmos vigilantes porque NÃO SABEIS QUE DIA VIRÁ VOSSO SENHOR. O tempo da graça está se esgotando rapidamente!
+            </div>
+
+            <p>Os sinais profetizados por Jesus estão se cumprindo de forma acelerada diante dos nossos olhos! Cada notícia, cada evento mundial, cada sinal nos céus proclama a mesma verdade: <strong>JESUS ESTÁ VOLTANDO!</strong></p>
+
+            <h3>Sinais Visíveis Hoje:</h3>
+            <ul>
+                <li>🌍 <strong>Guerras e rumores de guerras</strong> - Conflitos se intensificando globalmente</li>
+                <li>🌪️ <strong>Fenômenos naturais extremos</strong> - Terremotos, furacões, mudanças climáticas</li>
+                <li>😷 <strong>Pestilências</strong> - Pandemias e doenças se espalhando</li>
+                <li>📺 <strong>Evangelho sendo pregado em todo o mundo</strong> - Internet e mídias digitais</li>
+                <li>🇮🇱 <strong>Restauração de Israel</strong> - Cumprimento profético desde 1948</li>
+                <li>💔 <strong>Resfriamento do amor</strong> - Divisões, ódio e indiferença crescentes</li>
+            </ul>
+        </article>
+
+        <article class="post">
+            <h2>⏰ JESUS ESTÁ VOLTANDO - A Qualquer Momento!</h2>
+            <div class="post-meta">Reflexão Bíblica Urgente</div>
+
+            <p><strong>JESUS ESTÁ VOLTANDO!</strong> Ele está mais próximo de voltar do que muitos imaginam. Jesus disse que ninguém sabe o dia nem a hora, mas Ele nos deu sinais para reconhecermos a proximidade de Sua vinda. <strong>VIGIAI E ORAI - não sabeis que dia virá vosso Senhor!</strong></p>
+
+            <div class="verse-highlight">
+                <strong>"Vigiai, pois, porque não sabeis nem o dia nem a hora em que o Filho do homem há de vir."</strong> - Mateus 25:13
+            </div>
+
+            <div class="prayer-time">
+                🙏 MOMENTO DE ORAÇÃO URGENTE 🙏<br>
+                "Senhor Jesus, Tu estás voltando! Ajuda-nos a vigiar e orar constantemente. Purifica nossos corações e usa-nos para levar outros ao Teu Reino antes que seja tarde demais. Vem, Senhor Jesus! Amém."
+            </div>
+
+            <p><strong>JESUS ESTÁ VOLTANDO!</strong> Não podemos mais adiar nossa decisão! O tempo da graça ainda está aberto, mas Jesus pode voltar a qualquer momento - hoje, amanhã, nesta hora! Precisamos estar em santidade e compartilhar esta mensagem urgente com todos ao nosso redor.</p>
+
+            <div class="scripture">
+                "Eis que venho sem demora; guarda o que tens, para que ninguém tome a tua coroa. Aquele que tem ouvidos, ouça o que o Espírito diz às igrejas." - Apocalipse 3:11,22
+            </div>
+        </article>
+
+        <article class="post">
+            <h2>🔥 Chamado à Santificação</h2>
+            <div class="post-meta">Palavra de Exortação</div>
+
+            <p>A volta de Jesus não é apenas uma doutrina - é uma realidade iminente que deve transformar nossa vida diária. Como estamos vivendo? Estamos prontos para encontrar com o Senhor?</p>
+
+            <div class="scripture">
+                "E todo aquele que nele tem esta esperança purifica-se a si mesmo, como também ele é puro." - 1 João 3:3
+            </div>
+
+            <h3>✨ Preparação Espiritual Urgente:</h3>
+            <ul>
+                <li><strong>Arrependimento genuíno</strong> - Confessar e abandonar todo pecado</li>
+                <li><strong>Vida de oração constante</strong> - Comunhão íntima com Deus</li>
+                <li><strong>Estudo da Palavra</strong> - Conhecer a vontade de Deus</li>
+                <li><strong>Evangelização urgente</strong> - Ganhar almas para Cristo</li>
+                <li><strong>Santidade prática</strong> - Viver como Cristo viveu</li>
+                <li><strong>Amor fraternal</strong> - Unidade no Corpo de Cristo</li>
+            </ul>
+        </article>
+
+        <div class="sidebar">
+            <h3>📋 Profecias Já Cumpridas</h3>
+            <ul class="prophecy-list">
+                <li>Restauração de Israel (1948)</li>
+                <li>Evangelho pregado mundialmente</li>
+                <li>Aumento do conhecimento (Daniel 12:4)</li>
+                <li>Multiplicação da iniquidade</li>
+                <li>Falsos profetas se levantando</li>
+                <li>Sinais nos céus e na terra</li>
+                <li>Tempos trabalhosos (2 Timóteo 3)</li>
+            </ul>
+
+            <div class="verse-highlight">
+                "Vigiai, pois, porque não sabeis a que hora há de vir o vosso Senhor." - Mateus 24:42
+            </div>
+        </div>
+
+        <div class="call-to-action">
+            <h3>🚨 AÇÃO URGENTE NECESSÁRIA</h3>
+            <p>Este não é momento para passividade! Jesus está às portas. Compartilhe esta mensagem, ore pelos perdidos, viva em santidade e prepare-se para o maior evento da história!</p>
+            <p><strong>"Eis que venho sem demora; guarda o que tens, para que ninguém tome a tua coroa."</strong> - Apocalipse 3:11</p>
+        </div>
+
+        <div class="footer">
+            <p>✝️ "Ora vem, Senhor Jesus!" - Apocalipse 22:20 ✝️</p>
+            <p>Mantenha-se firme na fé e vigilante em oração</p>
+        </div>
+    </div>
+
+    <script>
+        // Adicionar efeito de notificação
+        function showUrgentAlert() {
+            const banner = document.querySelector('.urgent-banner');
+            banner.style.animation = 'none';
+            setTimeout(() => {
+                banner.style.animation = 'pulse 2s infinite';
+            }, 100);
+        }
+
+        // Mostrar alerta a cada 10 segundos
+        setInterval(showUrgentAlert, 10000);
+
+        // Versículo dinâmico
+        const verses = [
+            "Portanto, vigiai, porque não sabeis nem o dia nem a hora. - Mateus 25:13",
+            "E será pregado este evangelho do reino em todo o mundo, em testemunho a todas as nações, e então virá o fim. - Mateus 24:14",
+            "Eis que venho como ladrão. Bem-aventurado aquele que vigia. - Apocalipse 16:15",
+            "Porque ainda um pouquinho de tempo, e o que há de vir virá, e não tardará. - Hebreus 10:37"
+        ];
+
+        function changeVerse() {
+            const verseElements = document.querySelectorAll('.verse-highlight strong');
+            if (verseElements.length > 0) {
+                const randomVerse = verses[Math.floor(Math.random() * verses.length)];
+                verseElements[0].textContent = randomVerse;
+            }
+        }
+
+        // Trocar versículo a cada 15 segundos
+        setInterval(changeVerse, 15000);
+    </script>
+</body>
+</html>
